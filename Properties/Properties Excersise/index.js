@@ -6,6 +6,9 @@ class App extends React.Component{
                 <Machine slot={slotArr[Math.floor(Math.random() * 3) + 0]}/>
                 <Machine slot={slotArr[Math.floor(Math.random() * 3) + 0]}/>
                 <Machine slot={slotArr[Math.floor(Math.random() * 3) + 0]}/>
+
+                <Loops name="Stephanie" hobbies = {['Singing', 'Dancing', 'Yoga']}/>
+                <Loops name="Michael" hobbies = {['Reading','Swiming']}/>
             </div>
         );
     }

@@ -1,3 +1,0 @@
-This folder contains projects that are made using npx commands.
-
-npx create-react-app app_name

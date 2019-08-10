@@ -4,7 +4,7 @@ import './Dice.css';
 class Dice extends Component {
     render() {
         return (
-            <i class={`fas fa-dice-${this.props.face} fa-7x`}></i>
+            <i className={`Die fas fa-dice-${this.props.face} fa-7x ${this.props.rolling ? "shaking" : ""}`}></i>
         )
     }
 }

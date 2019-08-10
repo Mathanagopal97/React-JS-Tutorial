@@ -11,7 +11,7 @@ class Pokecard extends Component{
         return(
             <div className="Pokecard">
                 <h1 className="Pokecard-title">{this.props.name}</h1>
-                <img src = {imgSRC}/>
+                <div className="Pokecard-image"><img src = {imgSRC}/></div>
                 <div className="Pokecard-data">Type: {this.props.type}</div>
                 <div className="Pokecard-data">EXP: {this.props.exp}</div>
             </div>

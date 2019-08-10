@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <Clicker/>
       {/* <ClickerBable/> */}
+      {/* <ClickerBable/> */}
     </div>
   );
 }

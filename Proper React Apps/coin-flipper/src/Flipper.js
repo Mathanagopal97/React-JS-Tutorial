@@ -25,10 +25,6 @@ class Flipper extends Component {
             }));
             this.setState({ img: "http://www.pcgscoinfacts.com/UserImages/71009269r.jpg" });
         }
-
-        console.log(this.state.heads);
-        console.log(this.state.isHeads);
-        console.log(this.state.tails);
     }
     handleClick(e) {
         this.flipTheCoin();

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Dummy from './Dummy';
 
 class Clicker extends Component {
     constructor(props) {
@@ -22,6 +23,7 @@ class Clicker extends Component {
         return (
             <div>
                 <h1>The number is {this.state.number}</h1>
+                <Dummy number={this.state.number}/>
                 <div>
                     {!this.state.isWinner ? button : message}
                 </div>

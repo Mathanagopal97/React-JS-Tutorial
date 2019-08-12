@@ -18,7 +18,8 @@ class BoxesContainer extends Component {
             ));
         return (
             <div>
-                <h1>Color boxes. Click on them to change the color.</h1>
+                <h1>Color boxes.</h1>
+                <h2>Click on them to change the color.</h2>
                 <div className='BoxesContainer'>
                     <br />
                     {boxes}

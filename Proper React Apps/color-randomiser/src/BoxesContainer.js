@@ -13,8 +13,9 @@ class BoxesContainer extends Component {
         ]
     };
     render() {
+        let keys = 0; //Adding key - Use keys++(0 to end) and ++keys(1 to end) to add more keys
         const boxes = Array.from({ length: this.props.numBoxes }).map(
-            () => (<Box listOfColors={this.props.allColors} />
+            () => (<Box key={++keys} listOfColors={this.props.allColors} />
             ));
         return (
             <div>

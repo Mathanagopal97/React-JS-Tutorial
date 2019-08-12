@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Box.css';
-import {choose} from './helper'
+import { choose } from './helper'
 
 class Box extends Component {
     constructor(props) {
@@ -13,10 +13,10 @@ class Box extends Component {
 
     chooseColor() {
         let newColor;
-        do{
+        do {
             newColor = choose(this.props.listOfColors);
-        }while(newColor === this.state.color);
-        this.setState({color: newColor});
+        } while (newColor === this.state.color);
+        this.setState({ color: newColor });
     }
 
     handleClick() {

@@ -77,14 +77,14 @@ class Hangman extends Component {
     if (this.state.nWrong >= this.props.maxWrong) {
       return (
         <div>
-          <h1>Game over. You lose</h1>
+          <h3 className = "Loser">Game over. You lose</h3>
         </div>
       );
     }
     else if (this.state.nCorrect === this.state.answer.length) {
       return (
         <div>
-          <h1>Game over. You win.</h1>
+          <h3 className = "Winner">Game over. You win.</h3>
         </div>
       );
     }
@@ -93,6 +93,7 @@ class Hangman extends Component {
         <p className='Hangman-btns'>
           {"abcdefghijklmnopqrstuvwxyz".split("").map(ltr => (
             <button
+              className="Hangman-Buttons"
               key={++k}
               value={ltr}
               onClick={this.handleGuess}
@@ -113,6 +114,7 @@ class Hangman extends Component {
         nWrong: 0, guessed: new Set(), answer: randomWord(), nCorrect: 0
       }
     );
+    this.generateButtons();
   }
 
   /** render: render game */
@@ -124,9 +126,11 @@ class Hangman extends Component {
         <p>No. of wrong guesses is: {this.state.nWrong}</p>
         {this.guessedWord()}
         {this.generateButtons()}
-        <button className="Reset" onClick={this.handleReset}>
-          Reset
-        </button>
+        <div>
+          <button className="Reset warning" onClick={this.handleReset}>
+            Reset
+          </button>
+        </div>
       </div>
     );
   }

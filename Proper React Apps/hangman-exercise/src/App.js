@@ -5,7 +5,7 @@ import Hangman from './Hangman';
 function App() {
   return (
     <div className="App">
-      <Hangman maxWrong={4}/>
+      <Hangman maxWrong={6}/>
     </div>
   );
 }

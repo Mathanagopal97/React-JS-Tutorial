@@ -18,8 +18,9 @@ class Hangman extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { nWrong: 0, guessed: new Set(), answer: randomWord(), nCorrect: 0};
+    this.state = { nWrong: 0, guessed: new Set(), answer: randomWord(), nCorrect: 0 };
     this.handleGuess = this.handleGuess.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
 
   /** guessedWord: show current-state of word:
@@ -43,21 +44,18 @@ class Hangman extends Component {
       );
     }
   }
-/*
-To calculate the exact number of correct guesses.
-*/
-char_count(str, letter) 
-{
- var letter_Count = 0;
- for (var position = 0; position < str.length; position++) 
- {
-    if (str.charAt(position) == letter) 
-      {
-      letter_Count += 1;
+  /*
+  To calculate the exact number of correct guesses.
+  */
+  char_count(str, letter) {
+    var letter_Count = 0;
+    for (var position = 0; position < str.length; position++) {
+      if (str.charAt(position) === letter) {
+        letter_Count += 1;
       }
+    }
+    return letter_Count;
   }
-  return letter_Count;
-}
 
   /** handleGuest: handle a guessed letter:
     - add to guessed letters
@@ -65,7 +63,7 @@ char_count(str, letter)
   */
   handleGuess(evt) {
     let ltr = evt.target.value;
-    let newnCorrect = this.char_count(this.state.answer,ltr);
+    let newnCorrect = this.char_count(this.state.answer, ltr);
     this.setState(st => ({
       guessed: st.guessed.add(ltr),
       nWrong: st.nWrong + (st.answer.includes(ltr) ? 0 : 1),
@@ -83,8 +81,8 @@ char_count(str, letter)
         </div>
       );
     }
-    else if(this.state.nCorrect === this.state.answer.length){
-      return(
+    else if (this.state.nCorrect === this.state.answer.length) {
+      return (
         <div>
           <h1>Game over. You win.</h1>
         </div>
@@ -109,6 +107,14 @@ char_count(str, letter)
     }
   }
 
+  handleReset(evt) {
+    this.setState(
+      {
+        nWrong: 0, guessed: new Set(), answer: randomWord(), nCorrect: 0
+      }
+    );
+  }
+
   /** render: render game */
   render() {
     return (
@@ -118,6 +124,9 @@ char_count(str, letter)
         <p>No. of wrong guesses is: {this.state.nWrong}</p>
         {this.guessedWord()}
         {this.generateButtons()}
+        <button className="Reset" onClick={this.handleReset}>
+          Reset
+        </button>
       </div>
     );
   }

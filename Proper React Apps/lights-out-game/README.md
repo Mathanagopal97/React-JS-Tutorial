@@ -13,7 +13,7 @@ We’ll give you a component design further down, but thinking about the require
 
 
 ## Code
-This game will be built from three components: 
+This game will be built from three components
 
 ### Component Design:
 

@@ -22,7 +22,7 @@ As often, this is a very simple component. It just renders the **_Board_** compo
 #### Board
 The most sophisticated component. It will hold the state that represents the in-memory grid of true/false for lights-on/off. Since the state for the board lives here, this is also were the **_setState()_** calls will need to go — and therefore, all the functions that call **_setState()_**.
 #### Cell
-A simpler component. This will simply render a **_div_**, where the CSS classes will indicate whether this cell is lit or unlit. This is what the user clicks on — but it will need to call a function it receives from the **_Board_**, since that will need to update the state.
+A simpler component. This will simply render a **_`<div>`_**, where the CSS classes will indicate whether this cell is lit or unlit. This is what the user clicks on — but it will need to call a function it receives from the **_Board_**, since that will need to update the state.
 
 
 When the game is won, the board should not be shown, but a simple “You Won” message should show in its place.

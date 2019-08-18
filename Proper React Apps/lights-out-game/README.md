@@ -1,4 +1,4 @@
-## Lights Out
+# Lights Out Game
 This exercise provides a chance to work with React events where the state and events happen in different classes.
 
 ## The Game
@@ -18,11 +18,11 @@ This game will be built from three components:
 ## Component Design
 
 ## App
-As often, this is a very simple component. It just renders the Board component.
+As often, this is a very simple component. It just renders the **_Board_** component.
 ## Board
-The most sophisticated component. It will hold the state that represents the in-memory grid of true/false for lights-on/off. Since the state for the board lives here, this is also were the setState() calls will need to go — and therefore, all the functions that call setState().
+The most sophisticated component. It will hold the state that represents the in-memory grid of true/false for lights-on/off. Since the state for the board lives here, this is also were the **_setState()_** calls will need to go — and therefore, all the functions that call **_setState()_**.
 ## Cell
-A simpler component. This will simply render a <div>, where the CSS classes will indicate whether this cell is lit or unlit. This is what the user clicks on — but it will need to call a function it receives from the Board, since that will need to update the state.
+A simpler component. This will simply render a **_div_**, where the CSS classes will indicate whether this cell is lit or unlit. This is what the user clicks on — but it will need to call a function it receives from the **_Board_**, since that will need to update the state.
 
 
 When the game is won, the board should not be shown, but a simple “You Won” message should show in its place.
@@ -33,12 +33,12 @@ A small amount of code is provided, but there are lots of places where you’ll 
 Default Properties
 Add default properties for the board sizes and how likely it is the a light on the initial board is turned on or off.
 
-## Improve Our CSS
+**Improve Our CSS**
 The CSS we provided is enough to visualize the game working, but it could be improved in a million ways: better colors, rounded shapes, or CSS animations might make it nicer.
 
-## Ensure A Game Is Winnable
+**Ensure A Game Is Winnable**
 Depending on the size of your board, some lights-on/lights-off starting configurations may not actually be solvable — which is pretty mean for your users.
 
-It’s relatively difficult to decide if any given board is solvable (here’s some light reading on this [topic](https://ida.mtholyoke.edu/xmlui/bitstream/handle/10166/693/375.pdf?sequence=1&isAllowed=y)— but there is a simple trick to make sure a starting board you give a player is solvable.
+It’s relatively difficult to decide if any given board is solvable (here’s some light reading on this [topic](https://ida.mtholyoke.edu/xmlui/bitstream/handle/10166/693/375.pdf?sequence=1&isAllowed=y))— but there is a simple trick to make sure a starting board you give a player is solvable.
 
 Figure out how to do this

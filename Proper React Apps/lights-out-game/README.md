@@ -39,6 +39,6 @@ The CSS we provided is enough to visualize the game working, but it could be imp
 ## Ensure A Game Is Winnable
 Depending on the size of your board, some lights-on/lights-off starting configurations may not actually be solvable — which is pretty mean for your users.
 
-It’s relatively difficult to decide if any given board is solvable (here’s some [light reading on this topic] https://ida.mtholyoke.edu/xmlui/bitstream/handle/10166/693/375.pdf?sequence=1&isAllowed=y) — but there is a simple trick to make sure a starting board you give a player is solvable.
+It’s relatively difficult to decide if any given board is solvable (here’s some [light reading on this [topic](https://ida.mtholyoke.edu/xmlui/bitstream/handle/10166/693/375.pdf?sequence=1&isAllowed=y)— but there is a simple trick to make sure a starting board you give a player is solvable.
 
 Figure out how to do this

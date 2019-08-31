@@ -18,6 +18,7 @@ export default class MultipleForms extends Component {
   }
   handleSubmit(evt){
     evt.preventDefault();
+    
     alert(`Username: ${this.state.userName}\nPassword: ${this.state.password}\nEmail: ${this.state.password}`);
   }
   render() {
